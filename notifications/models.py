@@ -154,7 +154,7 @@ class Notification(models.Model):
 EXTRA_DATA = False
 if getattr(settings, 'NOTIFY_USE_JSONFIELD', False):
     try:
-        from jsonfield.fields import JSONField
+        from jsonfield import JSONField
     except ImportError:
         raise ImproperlyConfigured("You must have a suitable JSONField installed")
     
